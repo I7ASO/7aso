@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<input id="name" placeholder="اكتب اسمك">
+<button onclick="show()">إرسال</button>
+
+<div id="output"></div>
+
+<script>
+function show() {
+  const name = document.getElementById("name").value;
+  document.getElementById("output").innerHTML = name;
+}
+</script>
+
+</body>
+</html>
