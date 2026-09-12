@@ -1,107 +1,60 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>عداد الزوار المتصلين</title>
-  <link href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@400;600&display=swap" rel="stylesheet">
-  
-  <style>
-    body {
-      background-color: #0b0f19;
-      color: #fff;
-      font-family: 'Readex Pro', sans-serif;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      min-height: 100vh;
-      margin: 0;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ASCII Art Display</title>
+    <style>
+        body {
+            background-color: #0d1117; /* لون خلفية مظلم يناسب GitHub */
+            color: #58a6ff;           /* لون النص (يمكنك تغييره لأي لون تحبه) */
+            font-family: monospace;    /* خط ثابت العرض للحفاظ على تناسق الرسمة */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
 
-    .live-card {
-      background: rgba(23, 31, 48, 0.7);
-      border: 1px solid rgba(255, 255, 255, 0.08);
-      padding: 20px 32px;
-      border-radius: 20px;
-      backdrop-filter: blur(12px);
-      display: flex;
-      align-items: center;
-      gap: 16px;
-      box-shadow: 0 20px 40px rgba(0,0,0,0.4);
-    }
-
-    /* نقطة خضراء تومض تدل على الحالية Live */
-    .pulse-dot {
-      width: 12px;
-      height: 12px;
-      background-color: #10b981;
-      border-radius: 50%;
-      position: relative;
-    }
-
-    .pulse-dot::after {
-      content: '';
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      background-color: #10b981;
-      border-radius: 50%;
-      animation: pulse 1.5s infinite ease-out;
-      opacity: 0.6;
-    }
-
-    @keyframes pulse {
-      0% { transform: scale(1); opacity: 0.8; }
-      100% { transform: scale(2.5); opacity: 0; }
-    }
-
-    .counter-text {
-      font-size: 1.1rem;
-      color: #94a3b8;
-    }
-
-    .counter-number {
-      font-weight: 700;
-      color: #38bdf8;
-      font-size: 1.4rem;
-    }
-  </style>
+        /* عنصر pre هو الأساس للحفاظ على الفراغات والسطور كما هي */
+        pre {
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 14px;
+            line-height: 1.2;
+            background-color: #161b22;
+            padding: 20px;
+            border-radius: 8px;
+            border: 1px solid #30363d;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+            overflow-x: auto;
+        }
+    </style>
 </head>
 <body>
 
-  <div class="live-card">
-    <div class="pulse-dot"></div>
-    <div class="counter-text">
-      المتصلون الآن: <span id="onlineCount" class="counter-number">1</span>
-    </div>
-  </div>
+<pre>
+=.......:                                           
+                                            =................                                       
+                                          ...........:::.::....                                     
+                                         ...::...**.....::::::...                                   
+                                  :......:::..***..***..::::::::..                                  
+                                ...:::::::.#**:..==..:***.:::::::..                                 
+                              :.::::::::.***..:*####*:..***..:::::.                                 
+                             =.:::::::.**:..*##*....****:..***.:::::                                
+                             .::::::::**..*#*:..*#**..:*#**..*#*::::...                             
+                           =.:::::::::#*.:#*..*##*=*#*:**..***:::::::::::.                          
+                         :.:::::::::::**.:#*..*##*...*##*+**.:::::::::::::.                         
+                        .::--::-:::-::=#:.*##*.:.*##*.::*#*::::-----------::-                       
+                       .:------------::*#*..:*##*.::*##*..*##::------------:.                       
+                      +:--------------:::*#*::.*##*::.*##*::#=:-------------::                      
+                      ::--------------::##-*##*.:.*##*..##::*#:-------------::                      
+                      =:------------::##::..::*##**##*:.*#-:*#:-------------:                       
+                       .-----------:##*.:*##*::.*##*.::##*:.#*:-------------.                       
+                        :--=---=-----:*#*::.*##*.::.*##*.::#*:---------==--.                        
+                         :---========--::###::+######*::+##:--=========--:-                         
+                           ::--------=----:*##:::**:::###:------=-----::                            
+                                 ***    * ***###*:.   #**#*********
+</pre>
 
-  <!-- ربط مكتبة Firebase -->
-  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-database.js"></script>
-
-  <script>
-    // ⚙️ ضع إعدادات مشروعك من Firebase هنا
-    const firebaseConfig = {
-      apiKey: "YOUR_API_KEY",
-      authDomain: "YOUR_PROJECT.firebaseapp.com",
-      databaseURL: "https://YOUR_PROJECT-default-rtdb.firebaseio.com",
-      projectId: "YOUR_PROJECT",
-      storageBucket: "YOUR_PROJECT.appspot.com",
-      messagingSenderId: "XXXXX",
-      appId: "XXXXX"
-    };
-
-    // تهيئة الفايربيس (قم بإلغاء التعليق عند وضع بياناتك)
-    // firebase.initializeApp(firebaseConfig);
-    // const db = firebase.database();
-
-    /* 
-       فكرة العمل:
-       1. عند دخول المستخدم، نضيف معرّف له في السيرفر.
-       2. نستخدم `.onDisconnect().remove()` لقصده وحذفه عند إغلاق المتصفح.
-       3. نستمع للتغييرات ونعرض العدد المتبقي تلقائياً.
-    */
-  </script>
 </body>
 </html>
