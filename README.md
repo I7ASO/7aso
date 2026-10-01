@@ -1,46 +1,47 @@
 # 🚀 7ASO | Personal Portfolio & Bio Website
 
-موقع شخصي ومعرض أعمال متكامل يتميز بتصميم عصري وأنيق بأسلوب **Cyber / Dark Purple**، مصمم لعرض المهارات، الخبرات، والروابط الشخصية والتفاعلية بأسلوب باهر.
+موقع شخصي ومعرض أعمال متكامل مصمم بأسلوب **Cyber / Dark Purple** جذاب، مخصص لعرض المهارات، الخبرات البرمجية، والمشاريع، بالإضافة إلى تجميع كافة الحسابات والمنصات الرسمية الخاصة بالمطور **حسين (7ASO)** في مكان واحد.
 
 ---
 
-## 🌟 الميزات (Features)
+## 👤 نبذة عن المطور (About Me)
 
-- 🎨 **تصميم داكن عصري (Dark & Neon Theme):** ألوان نيون مريحة للعين مع تأثيرات Glassmorphic وضوء خلفي جذاب.
-- ⚡ **حالة نشطة تفاعلية (Live Status Badge):** شريط يعرض الحالة الحالية للمطور ("متاح للمشاريع والعمل ⚡").
-- 📱 **متجاوب تماماً (Responsive Design):** يتكيف بسلاسة مع كافة أجهزة الكمبيوتر، الشاشات الكبيرة، والهواتف الذكية.
-- 🔗 **بطاقات روابط تفاعلية:** وصول سريع ومباشر لحسابات **GitHub**, **Discord**, و **YouTube**.
-- 📋 **خاصية نسخ معرف Discord:** زر نسخ سريع لمعرف الحساب (Discord ID) مع إشعار ناعم (Toast Notification).
-- ⚡ **سريع وخفيف الوزن:** تم بناؤه باستخدام HTML5, CSS3, و JavaScript بدون الحاجة لمكتبات خارجية ثقيلة.
+- **الاسم / اللقب:** حسين (7ASO)
+- **التخصص:** مطور واجهات مستخدم (Front-End Developer)، برمجة بوتات Discord، سكربتات وتطوير Roblox Studio (Luau)، وصانع محتوى.
+- **الشغف:** ابتكار التجارب الرقمية الحديثة، تصميم الواجهات المظلمة والنيون، وبناء أدوات المطورين والأنظمة التفاعلية.
 
 ---
 
-## 🛠️ التقنيات المستخدمة (Tech Stack)
+## 🌐 الحسابات والمنصات الرسمية (All Social Links & Accounts)
 
-- **HTML5:** بناء الهيكل الأساسي للصفحة بأسلوب دلالي (Semantic Markup).
-- **CSS3:** التنسيق والتأثيرات النيونية، التدرجات الضوئية، وتجاوب الشاشات (Flexbox & CSS Grid).
-- **JavaScript (Vanilla):** تفعيل الأوامر التفاعلية مثل نسخ المعرف وتنبيهات الإشعارات.
-- **FontAwesome v6:** استخدام الأيقونات العصرية للشبكات والخدمات.
-
----
-
-## 🔗 الحسابات الشخصية (Social Links)
-
-- **GitHub:** [@I7ASO](https://github.com/I7ASO)
-- **Discord Account:** [حساب الدسكورد](https://discord.com/users/1355156562053697626) `(ID: 1355156562053697626)`
-- **YouTube Channel:** [@7.a.s.o](https://youtube.com/@7.a.s.o?si=iQLGje48-xGNfXq4)
+| المنصة | الحساب / الرابط | الوصف |
+| :--- | :--- | :--- |
+| **GitHub** | [@I7ASO](https://github.com/I7ASO) | المستودعات والمشاريع البرمجية مفتوحة المصدر |
+| **Discord Profile** | [الملف الشخصي](https://discord.com/users/1355156562053697626) | للتواصل المباشر عبر دسكورد |
+| **Discord ID** | `1355156562053697626` | المعرف المباشر للنسخ والإضافة |
+| **YouTube** | [@7.a.s.o](https://youtube.com/@7.a.s.o?si=iQLGje48-xGNfXq4) | القناة الرسمية للشروحات والمقاطع التفاعلية |
 
 ---
 
-## 💻 طريقة التشغيل الاستضافة (How to Run / Deploy)
+## 🛠️ المهارات والخبرات التقنية (Skills & Expertise)
 
-1. **التشغيل المحلي:**
-   - قم بتحميل كود `index.html`.
-   - افتح الملف بمرتين متتاليتين في أي متصفح (Chrome, Edge, Firefox).
-
-2. **الرفع والاستضافة المجانية:**
-   - يمكنك رفع الملف مباشرة على **GitHub Pages**، **Firebase Hosting**، أو **Vercel / Render** ليعمل موقعك مباشرة أونلاين مجاناً!
+- **تطوير الويب (Web Development):** HTML5, CSS3, JavaScript (ES6+), React, Vite.
+- **تطوير الألعاب والسكربتات (Game Dev & Scripting):** Roblox Luau, ProximityPrompts, UI Systems, TweenService, Studio Plugins.
+- **برمجة البوتات (Bot Development):** Discord.js / Node.js (Slash Commands, Dynamic Embeds, Auto-Moderation).
+- **التصميم والهوية (UI/UX & Branding):** تصميم واجهات داكنة (Dark/Neon Themes), Vector Graphics, Inkscape.
+- **أدوات المطورين والرفع (Tools & Deployment):** VS Code, Git/GitHub, Render, Replit, Firebase Hosting, PM2.
 
 ---
+
+## 🌟 ميزات الموقع (`index.html`)
+
+- 🎨 **تصميم نيون داكن (Dark & Cyber Purple Theme):** مريح للعين مع إضاءات وتأثيرات زجاجية (Glassmorphism).
+- ⚡ **حالة نشطة تفاعلية (Live Status Badge):** إشارة تفاعلية بـ "متاح للمشاريع والعمل ⚡".
+- 📱 **تجاوب كامل (Fully Responsive):** يعمل بسلاسة على الجوالات، الآيباد، وشاشات الكمبيوتر.
+- 📋 **زر نسخ سريع (Copy Discord ID):** نسخ معرف الدسكورد بنقرة واحدة مع إشعار ناعم (Toast Notification).
+- 🚀 **أداء عالي وسريع:** مبني بالكامل بأكواد خفيفة بدون أي مكتبات ثقيلة تؤثر على السرعة.
+
+---
+
 
 © 2026 جميع الحقوق محفوظة لـ **7ASO**
